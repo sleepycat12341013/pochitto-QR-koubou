@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません — ぽちっとQR工房</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G6VC4NMYL"></script>
+  <script src="analytics-init.js"></script>
+  <style>
+    .error-page {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .error-box {
+      text-align: center;
+      max-width: 440px;
+    }
+    .error-code {
+      font-size: 96px;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      letter-spacing: -4px;
+      margin-bottom: 16px;
+    }
+    .error-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 10px;
+    }
+    .error-desc {
+      font-size: 14px;
+      color: var(--fg-muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .error-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--fg-muted);
+      transition: border-color .15s, color .15s;
+    }
+    .btn-outline:hover { border-color: var(--red); color: var(--red); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="site-logo">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="16.5" y="1.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="1.5" y="16.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="4" y="4" width="5" height="5" fill="currentColor"/>
+          <rect x="19" y="4" width="5" height="5" fill="currentColor"/>
+          <rect x="4" y="19" width="5" height="5" fill="currentColor"/>
+          <rect x="17" y="17" width="4" height="4" fill="currentColor"/>
+          <rect x="23" y="17" width="4" height="4" fill="currentColor"/>
+          <rect x="17" y="23" width="4" height="4" fill="currentColor"/>
+          <rect x="23" y="23" width="4" height="4" fill="currentColor"/>
+        </svg>
+        ぽちっとQR工房
+      </a>
+      <nav class="header-nav" aria-label="メインナビ">
+        <a href="news.html" class="nav-link">新着情報</a>
+        <a href="pricing.html" class="nav-link">料金プラン</a>
+        <a href="how-to.html" class="nav-link">使い方</a>
+        <a href="about.html" class="nav-link">会社案内</a>
+        <a href="faq.html" class="nav-link">サポート窓口</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">新規登録 / ログイン</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" aria-label="モバイルナビ">
+    <div class="mnav-header">
+      <span class="mnav-logo">ぽちっとQR工房</span>
+      <button class="mobile-nav-close" aria-label="閉じる">✕</button>
+    </div>
+    <div class="mnav-section">
+      <a href="index.html" class="mnav-link">＋ QRコードを作成する</a>
+      <a href="faq.html" class="mnav-link">❓ よくある質問</a>
+      <a href="contact.html" class="mnav-link">📩 お問い合わせ</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="error-page">
+      <div class="error-box">
+        <div class="error-code">404</div>
+        <h1 class="error-title">ページが見つかりません</h1>
+        <p class="error-desc">
+          お探しのページは移動・削除されたか、URLが間違っている可能性があります。<br>
+          以下のリンクからご利用ください。
+        </p>
+        <div class="error-links">
+          <a href="index.html" class="btn-primary">QRコードを作成する</a>
+          <a href="faq.html" class="btn-outline">よくある質問</a>
+          <a href="contact.html" class="btn-outline">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>すべての処理はブラウザ内で完結。入力内容はサーバーに送信されません。</p>
+    <nav class="footer-links">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">個人情報の取り扱いについて</a>
+      <a href="terms.html">利用規約</a>
+      <a href="about.html">運営会社</a>
+    </nav>
+    <p class="footer-copy">© 2026 ぽちっとQR工房</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

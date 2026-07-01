@@ -1,0 +1,18 @@
+﻿# Secrets & environment
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+secrets/
+
+# Markdown - never publish (all .md)
+*.md
+
+# Personal info / private files
+*.private.*
+
+# OS / tooling
+.DS_Store
+Thumbs.db
+node_modules/

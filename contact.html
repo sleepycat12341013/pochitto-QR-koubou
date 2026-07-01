@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ — ぽちっとQR工房</title>
+    <meta
+      name="description"
+      content="ぽちっとQR工房へのお問い合わせはこちら。ご質問・ご要望・不具合報告など、お気軽にご連絡ください。"
+    />
+    <link
+      rel="canonical"
+      href="https://qrcode-gen-website.pages.dev/contact.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://qrcode-gen-website.pages.dev/contact.html"
+    />
+    <meta property="og:title" content="お問い合わせ — ぽちっとQR工房" />
+    <meta
+      property="og:description"
+      content="ぽちっとQR工房へのお問い合わせはこちら。ご質問・ご要望などお気軽にどうぞ。"
+    />
+    <meta
+      property="og:image"
+      content="https://qrcode-gen-website.pages.dev/og-image.png"
+    />
+    <meta property="og:site_name" content="ぽちっとQR工房" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="お問い合わせ — ぽちっとQR工房" />
+    <meta
+      name="twitter:description"
+      content="ぽちっとQR工房へのお問い合わせはこちら。ご質問・ご要望などお気軽にどうぞ。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://qrcode-gen-website.pages.dev/og-image.png"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1G6VC4NMYL"
+    ></script>
+    <script src="analytics-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous"></script>
+    <style>
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .contact-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .contact-field label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--fg);
+      }
+      .contact-field input,
+      .contact-field textarea,
+      .contact-field select {
+        width: 100%;
+        padding: 10px 13px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-family: inherit;
+        font-size: 14px;
+        color: var(--fg);
+        background: var(--bg);
+        outline: none;
+        transition:
+          border-color 0.15s,
+          background 0.15s;
+      }
+      .contact-field input:focus,
+      .contact-field textarea:focus,
+      .contact-field select:focus {
+        border-color: var(--border-focus);
+        background: var(--surface);
+        box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+      }
+      .contact-field textarea {
+        resize: vertical;
+        min-height: 130px;
+        line-height: 1.6;
+      }
+      .contact-field input::placeholder,
+      .contact-field textarea::placeholder {
+        color: var(--fg-faint);
+      }
+      .required-mark {
+        color: var(--red);
+        margin-left: 4px;
+      }
+      .contact-note {
+        font-size: 12px;
+        color: var(--fg-faint);
+        line-height: 1.6;
+      }
+      .success-box {
+        display: none;
+        background: #dcfce7;
+        border: 1.5px solid #86efac;
+        border-radius: var(--radius-sm);
+        padding: 20px;
+        text-align: center;
+      }
+      .success-box.show {
+        display: block;
+      }
+      .success-box p {
+        color: #166534;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .success-box small {
+        color: #166534;
+        font-size: 12px;
+      }
+      .btn-sending {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <button
+          class="hamburger"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="site-logo">
+          <svg
+            class="logo-icon"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="1.5"
+              y="1.5"
+              width="10"
+              height="10"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <rect
+              x="16.5"
+              y="1.5"
+              width="10"
+              height="10"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <rect
+              x="1.5"
+              y="16.5"
+              width="10"
+              height="10"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <rect x="4" y="4" width="5" height="5" fill="currentColor" />
+            <rect x="19" y="4" width="5" height="5" fill="currentColor" />
+            <rect x="4" y="19" width="5" height="5" fill="currentColor" />
+            <rect x="17" y="17" width="4" height="4" fill="currentColor" />
+            <rect x="23" y="17" width="4" height="4" fill="currentColor" />
+            <rect x="17" y="23" width="4" height="4" fill="currentColor" />
+            <rect x="23" y="23" width="4" height="4" fill="currentColor" />
+          </svg>
+          ぽちっとQR工房
+        </a>
+        <nav class="header-nav" aria-label="メインナビ">
+          <a href="news.html" class="nav-link">新着情報</a>
+          <a href="pricing.html" class="nav-link">料金プラン</a>
+          <a href="how-to.html" class="nav-link">使い方</a>
+          <a href="about.html" class="nav-link">会社案内</a>
+          <a href="faq.html" class="nav-link">サポート窓口</a>
+        </nav>
+        <div class="header-actions">
+          <a href="login.html" class="btn-login">新規登録 / ログイン</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+    <nav class="mobile-nav" aria-label="モバイルナビ">
+      <div class="mnav-header">
+        <span class="mnav-logo">ぽちっとQR工房</span>
+        <button class="mobile-nav-close" aria-label="閉じる">✕</button>
+      </div>
+      <div class="mnav-section">
+        <p class="mnav-section-label">QR作成</p>
+        <a href="index.html" class="mnav-link">＋ 新規QR作成</a>
+        <a href="dashboard.html" class="mnav-link">⊞ ダッシュボード</a>
+        <a href="url-shortener.html" class="mnav-link">🔗 短縮URL</a>
+        <a href="text-qr.html" class="mnav-link">📝 テキスト変換</a>
+        <a href="contact-management.html" class="mnav-link">👥 連絡先管理</a>
+        <a href="qr-email.html" class="mnav-link">✉️ メール作成</a>
+        <a href="qr-map.html" class="mnav-link">📍 地図リンク</a>
+      </div>
+      <hr class="mnav-divider" />
+      <div class="mnav-section">
+        <p class="mnav-section-label">カスタマイズ</p>
+        <a href="templates.html" class="mnav-link">☰ テンプレート一覧</a>
+        <a href="login.html" class="mnav-link">✏️ デザイン編集</a>
+      </div>
+      <hr class="mnav-divider" />
+      <div class="mnav-section">
+        <p class="mnav-section-label">情報・サポート</p>
+        <a href="news.html" class="mnav-link">新着情報</a>
+        <a href="pricing.html" class="mnav-link">料金プラン</a>
+        <a href="how-to.html" class="mnav-link">使い方</a>
+        <a href="about.html" class="mnav-link">会社案内</a>
+        <a href="faq.html" class="mnav-link">サポート窓口</a>
+        <a href="contact.html" class="mnav-link mnav-link--active"
+          >お問い合わせ</a
+        >
+      </div>
+      <hr class="mnav-divider" />
+      <div class="mnav-section">
+        <a href="login.html" class="mnav-link mnav-link--primary"
+          >新規登録 / ログイン</a
+        >
+      </div>
+    </nav>
+
+    <div class="layout">
+      <aside class="sidebar sidebar--left">
+        <section class="sidebar-group">
+          <p class="sidebar-group-label">QR作成</p>
+          <nav>
+            <a href="index.html" class="sidebar-link"
+              ><span class="sidebar-icon">＋</span>新規QR作成</a
+            >
+            <a href="dashboard.html" class="sidebar-link"
+              ><span class="sidebar-icon">⊞</span>ダッシュボード</a
+            >
+            <a href="url-shortener.html" class="sidebar-link"
+              ><span class="sidebar-icon">🔗</span>短縮URL</a
+            >
+            <a href="text-qr.html" class="sidebar-link"
+              ><span class="sidebar-icon">📝</span>テキスト変換</a
+            >
+            <a href="contact-management.html" class="sidebar-link"
+              ><span class="sidebar-icon">👥</span>連絡先管理</a
+            >
+            <a href="qr-email.html" class="sidebar-link"
+              ><span class="sidebar-icon">✉️</span>メール作成</a
+            >
+            <a href="qr-map.html" class="sidebar-link"
+              ><span class="sidebar-icon">📍</span>地図リンク</a
+            >
+          </nav>
+        </section>
+        <section class="sidebar-group">
+          <p class="sidebar-group-label">カスタマイズ</p>
+          <nav>
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">☰</span>テンプレート一覧</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">✏️</span>デザイン編集</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">🖼</span>アイコンライブラリ</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">🖼</span>画像ギャラリー</a
+            >
+          </nav>
+        </section>
+        <section class="sidebar-group">
+          <p class="sidebar-group-label">設定メニュー</p>
+          <nav>
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">👤</span>アカウント設定</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">🔒</span>セキュリティ</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">⚡</span>API連携設定</a
+            >
+          </nav>
+        </section>
+        <section class="sidebar-group">
+          <p class="sidebar-group-label">便利ツール</p>
+          <nav>
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">◈</span>ブランド管理</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">↗</span>アクセス解析</a
+            >
+            <a href="login.html" class="sidebar-link"
+              ><span class="sidebar-icon">⚙️</span>その他ツール</a
+            >
+          </nav>
+        </section>
+        <section class="sidebar-group">
+          <p class="sidebar-group-label">サポート</p>
+          <nav>
+            <a href="faq.html" class="sidebar-link"
+              ><span class="sidebar-icon">❓</span>ヘルプセンター</a
+            >
+            <a href="faq.html" class="sidebar-link"
+              ><span class="sidebar-icon">💬</span>よくある質問</a
+            >
+            <a href="how-to.html" class="sidebar-link"
+              ><span class="sidebar-icon">📖</span>ガイドブック</a
+            >
+            <a href="contact.html" class="sidebar-link sidebar-link--active"
+              ><span class="sidebar-icon">📩</span>お問い合わせ</a
+            >
+          </nav>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-heading">
+          <h1 class="page-title">お問い合わせ</h1>
+          <p class="page-subtitle">
+            ご質問・ご要望・不具合報告などお気軽にどうぞ
+          </p>
+        </div>
+
+        <section class="card" aria-labelledby="contact-before-title">
+          <div class="card-header">
+            <h2 class="card-title" id="contact-before-title">
+              お問い合わせの前に
+            </h2>
+          </div>
+          <p
+            style="
+              font-size: 13px;
+              color: var(--fg-muted);
+              line-height: 1.7;
+              margin-bottom: 10px;
+            "
+          >
+            よくあるご質問は<a href="faq.html" style="color: var(--red)"
+              >FAQページ</a
+            >で解決できる場合があります。まずご確認ください。
+          </p>
+          <p style="font-size: 13px; color: var(--fg-muted); line-height: 1.7">
+            使い方については<a href="how-to.html" style="color: var(--red)"
+              >使い方ガイド</a
+            >もご参照ください。
+          </p>
+        </section>
+
+        <section class="card" aria-labelledby="form-title">
+          <div class="card-header">
+            <h2 class="card-title" id="form-title">お問い合わせフォーム</h2>
+          </div>
+
+          <div id="success-box" class="success-box">
+            <p>送信が完了しました！</p>
+            <small>通常2〜3営業日以内にご返信します。</small>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="contact-field">
+              <label for="cf-name"
+                >お名前<span class="required-mark">*</span></label
+              >
+              <input
+                type="text"
+                id="cf-name"
+                placeholder="山田 太郎"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="contact-field">
+              <label for="cf-email"
+                >メールアドレス<span class="required-mark">*</span></label
+              >
+              <input
+                type="email"
+                id="cf-email"
+                placeholder="example@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="contact-field">
+              <label for="cf-category"
+                >お問い合わせ種別<span class="required-mark">*</span></label
+              >
+              <select id="cf-category" required>
+                <option value="" disabled selected>選択してください</option>
+                <option value="使い方について">使い方について</option>
+                <option value="不具合・エラー報告">不具合・エラー報告</option>
+                <option value="機能のご要望">機能のご要望</option>
+                <option value="料金プランについて">料金プランについて</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label for="cf-message"
+                >お問い合わせ内容<span class="required-mark">*</span></label
+              >
+              <textarea
+                id="cf-message"
+                placeholder="ご質問・ご要望の詳細をご記入ください。"
+                required
+              ></textarea>
+            </div>
+            <p id="cf-error" class="error-msg" role="alert" hidden></p>
+            <p class="contact-note">
+              送信後、通常2〜3営業日以内にご返信します。
+            </p>
+            <button
+              type="submit"
+              class="btn-primary"
+              id="cf-submit"
+              style="align-self: flex-start"
+            >
+              送信する
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <aside class="sidebar sidebar--right">
+        <a href="login.html" class="btn-login btn-login--mobile"
+          >新規登録 / ログイン</a
+        >
+        <section class="right-panel">
+          <p class="right-panel-title">QR管理</p>
+          <a href="login.html" class="right-panel-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="14"
+                height="4"
+                rx="1"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <rect
+                x="1"
+                y="7"
+                width="14"
+                height="4"
+                rx="1"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <rect
+                x="1"
+                y="13"
+                width="8"
+                height="2"
+                rx="1"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+            </svg>
+            マイQR一覧
+          </a>
+          <a href="login.html" class="right-panel-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M1 12V5l5-3 4 2 4-2v9l-4 2-4-2-5 2z"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            アクセスレポート
+          </a>
+        </section>
+        <section class="right-panel right-panel--promo">
+          <div class="promo-content">
+            <p class="promo-text">
+              プレミアムプランで<br /><strong>もっと便利に！</strong>
+            </p>
+            <a href="pricing.html" class="btn-promo">詳細を見る</a>
+          </div>
+        </section>
+        <section class="right-panel">
+          <p class="right-panel-title">よくある質問</p>
+          <a href="faq.html" class="right-panel-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle
+                cx="7"
+                cy="7"
+                r="5.5"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <path
+                d="M5.5 5.5a1.5 1.5 0 012.8.7c0 1-1.3 1.3-1.3 2.3"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+              />
+              <circle cx="7" cy="10.5" r=".5" fill="currentColor" />
+            </svg>
+            FAQ一覧を見る
+          </a>
+          <a href="how-to.html" class="right-panel-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect
+                x="2"
+                y="2"
+                width="10"
+                height="10"
+                rx="1.5"
+                stroke="currentColor"
+                stroke-width="1.2"
+              />
+              <path
+                d="M4 5h6M4 7.5h4"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+              />
+            </svg>
+            使い方ガイド
+          </a>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>
+        すべての処理はブラウザ内で完結。入力内容はサーバーに送信されません。
+      </p>
+      <nav class="footer-links">
+        <a href="tokushoho.html">特定商取引法に基づく表記</a>
+        <a href="privacy.html">個人情報の取り扱いについて</a>
+        <a href="terms.html">利用規約</a>
+        <a href="about.html">運営会社</a>
+      </nav>
+      <p class="footer-copy">© 2026 ぽちっとQR工房</p>
+    </footer>
+
+    <script src="contact-form.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="80" cy="80" r="260" fill="white" fill-opacity="0.03"/>
+  <circle cx="1150" cy="580" r="340" fill="white" fill-opacity="0.03"/>
+
+  <!-- QR icon: 28x28 viewbox scaled x6 = 168x168, centered at (265, 315) -->
+  <g transform="translate(181,231) scale(6)">
+    <rect x="1.5" y="1.5" width="10" height="10" rx="2" stroke="white" stroke-width="2" fill="none"/>
+    <rect x="16.5" y="1.5" width="10" height="10" rx="2" stroke="white" stroke-width="2" fill="none"/>
+    <rect x="1.5" y="16.5" width="10" height="10" rx="2" stroke="white" stroke-width="2" fill="none"/>
+    <rect x="4" y="4" width="5" height="5" fill="white"/>
+    <rect x="19" y="4" width="5" height="5" fill="white"/>
+    <rect x="4" y="19" width="5" height="5" fill="white"/>
+    <rect x="17" y="17" width="4" height="4" fill="white"/>
+    <rect x="23" y="17" width="4" height="4" fill="white"/>
+    <rect x="17" y="23" width="4" height="4" fill="white"/>
+    <rect x="23" y="23" width="4" height="4" fill="white"/>
+  </g>
+
+  <!-- Divider -->
+  <line x1="520" y1="90" x2="520" y2="540" stroke="white" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Brand name -->
+  <text x="860" y="255" font-family="'Helvetica Neue', Arial, sans-serif" font-size="74" font-weight="700" fill="white" text-anchor="middle">SmartQR Studio</text>
+
+  <!-- Tagline -->
+  <text x="860" y="330" font-family="'Helvetica Neue', Arial, sans-serif" font-size="38" fill="rgba(255,255,255,0.85)" text-anchor="middle">無料QRコード即時生成</text>
+
+  <!-- Feature chips -->
+  <rect x="604" y="372" width="148" height="40" rx="20" fill="rgba(255,255,255,0.18)"/>
+  <text x="678" y="397" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">URLリンク</text>
+
+  <rect x="764" y="372" width="148" height="40" rx="20" fill="rgba(255,255,255,0.18)"/>
+  <text x="838" y="397" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">テキスト</text>
+
+  <rect x="924" y="372" width="186" height="40" rx="20" fill="rgba(255,255,255,0.18)"/>
+  <text x="1017" y="397" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">ブラウザ完結</text>
+
+  <!-- URL -->
+  <text x="860" y="530" font-family="monospace" font-size="20" fill="rgba(255,255,255,0.42)" text-anchor="middle">sleepycat12341013.github.io/QRcode_Gen_Website</text>
+</svg>

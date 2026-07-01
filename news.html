@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新着情報 — ぽちっとQR工房</title>
+  <meta name="description" content="ぽちっとQR工房の最新情報・アップデート・機能追加のお知らせ。無料QRコード生成サービスの新着情報はこちら。">
+  <link rel="canonical" href="https://qrcode-gen-website.pages.dev/news.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qrcode-gen-website.pages.dev/news.html">
+  <meta property="og:title" content="新着情報 — ぽちっとQR工房">
+  <meta property="og:description" content="ぽちっとQR工房の最新情報・アップデート・機能追加のお知らせ。">
+  <meta property="og:image" content="https://qrcode-gen-website.pages.dev/og-image.png">
+  <meta property="og:site_name" content="ぽちっとQR工房">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="新着情報 — ぽちっとQR工房">
+  <meta name="twitter:description" content="ぽちっとQR工房の最新情報・アップデート・機能追加のお知らせ。">
+  <meta name="twitter:image" content="https://qrcode-gen-website.pages.dev/og-image.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G6VC4NMYL"></script>
+  <script src="analytics-init.js"></script>
+  <style>
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+    .news-item { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-date { font-size: 12px; color: var(--fg-faint); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+    .news-body { flex: 1; }
+    .news-tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px; margin-bottom: 6px; }
+    .news-tag--update { background: #DBEAFE; color: #1E40AF; }
+    .news-tag--feature { background: #DCFCE7; color: #166534; }
+    .news-tag--notice { background: #FEF9C3; color: #854D0E; }
+    .news-title { font-size: 14px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+    .news-desc { font-size: 13px; color: var(--fg-muted); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="site-logo">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="16.5" y="1.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="1.5" y="16.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="4" y="4" width="5" height="5" fill="currentColor"/>
+          <rect x="19" y="4" width="5" height="5" fill="currentColor"/>
+          <rect x="4" y="19" width="5" height="5" fill="currentColor"/>
+          <rect x="17" y="17" width="4" height="4" fill="currentColor"/>
+          <rect x="23" y="17" width="4" height="4" fill="currentColor"/>
+          <rect x="17" y="23" width="4" height="4" fill="currentColor"/>
+          <rect x="23" y="23" width="4" height="4" fill="currentColor"/>
+        </svg>
+        ぽちっとQR工房
+      </a>
+      <nav class="header-nav" aria-label="メインナビ">
+        <a href="news.html" class="nav-link">新着情報</a>
+        <a href="pricing.html" class="nav-link">料金プラン</a>
+        <a href="how-to.html" class="nav-link">使い方</a>
+        <a href="about.html" class="nav-link">会社案内</a>
+        <a href="faq.html" class="nav-link">サポート窓口</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">新規登録 / ログイン</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" aria-label="モバイルナビ">
+    <div class="mnav-header">
+      <span class="mnav-logo">ぽちっとQR工房</span>
+      <button class="mobile-nav-close" aria-label="閉じる">✕</button>
+    </div>
+    <div class="mnav-section">
+      <p class="mnav-section-label">QR作成</p>
+      <a href="index.html" class="mnav-link">＋ 新規QR作成</a>
+      <a href="dashboard.html" class="mnav-link">⊞ ダッシュボード</a>
+      <a href="url-shortener.html" class="mnav-link">🔗 短縮URL</a>
+      <a href="text-qr.html" class="mnav-link">📝 テキスト変換</a>
+      <a href="contact-management.html" class="mnav-link">👥 連絡先管理</a>
+      <a href="qr-email.html" class="mnav-link">✉️ メール作成</a>
+      <a href="qr-map.html" class="mnav-link">📍 地図リンク</a>
+    </div>
+    <hr class="mnav-divider">
+    <div class="mnav-section">
+      <p class="mnav-section-label">カスタマイズ</p>
+      <a href="templates.html" class="mnav-link">☰ テンプレート一覧</a>
+      <a href="login.html" class="mnav-link">✏️ デザイン編集</a>
+    </div>
+    <hr class="mnav-divider">
+    <div class="mnav-section">
+      <p class="mnav-section-label">情報・サポート</p>
+      <a href="news.html" class="mnav-link">新着情報</a>
+      <a href="pricing.html" class="mnav-link">料金プラン</a>
+      <a href="how-to.html" class="mnav-link">使い方</a>
+      <a href="about.html" class="mnav-link">会社案内</a>
+      <a href="faq.html" class="mnav-link">サポート窓口</a>
+      <a href="contact.html" class="mnav-link">お問い合わせ</a>
+    </div>
+    <hr class="mnav-divider">
+    <div class="mnav-section">
+      <a href="login.html" class="mnav-link mnav-link--primary">新規登録 / ログイン</a>
+    </div>
+  </nav>
+
+  <div class="layout">
+
+    <aside class="sidebar sidebar--left">
+      <section class="sidebar-group">
+        <p class="sidebar-group-label">QR作成</p>
+        <nav>
+          <a href="index.html" class="sidebar-link"><span class="sidebar-icon">＋</span>新規QR作成</a>
+          <a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">⊞</span>ダッシュボード</a>
+          <a href="url-shortener.html" class="sidebar-link"><span class="sidebar-icon">🔗</span>短縮URL</a>
+          <a href="text-qr.html" class="sidebar-link"><span class="sidebar-icon">📝</span>テキスト変換</a>
+          <a href="contact-management.html" class="sidebar-link"><span class="sidebar-icon">👥</span>連絡先管理</a>
+          <a href="qr-email.html" class="sidebar-link"><span class="sidebar-icon">✉️</span>メール作成</a>
+          <a href="qr-map.html" class="sidebar-link"><span class="sidebar-icon">📍</span>地図リンク</a>
+        </nav>
+      </section>
+      <section class="sidebar-group">
+        <p class="sidebar-group-label">カスタマイズ</p>
+        <nav>
+          <a href="templates.html" class="sidebar-link"><span class="sidebar-icon">☰</span>テンプレート一覧</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">✏️</span>デザイン編集</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">🖼</span>アイコンライブラリ</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">🖼</span>画像ギャラリー</a>
+        </nav>
+      </section>
+      <section class="sidebar-group">
+        <p class="sidebar-group-label">設定メニュー</p>
+        <nav>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">👤</span>アカウント設定</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">🔒</span>セキュリティ</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">⚡</span>API連携設定</a>
+        </nav>
+      </section>
+      <section class="sidebar-group">
+        <p class="sidebar-group-label">便利ツール</p>
+        <nav>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">◈</span>ブランド管理</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">↗</span>アクセス解析</a>
+          <a href="login.html" class="sidebar-link"><span class="sidebar-icon">⚙️</span>その他ツール</a>
+        </nav>
+      </section>
+      <section class="sidebar-group">
+        <p class="sidebar-group-label">サポート</p>
+        <nav>
+          <a href="faq.html" class="sidebar-link"><span class="sidebar-icon">❓</span>ヘルプセンター</a>
+          <a href="faq.html" class="sidebar-link"><span class="sidebar-icon">💬</span>よくある質問</a>
+          <a href="how-to.html" class="sidebar-link"><span class="sidebar-icon">📖</span>ガイドブック</a>
+          <a href="contact.html" class="sidebar-link"><span class="sidebar-icon">📩</span>お問い合わせ</a>
+        </nav>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-heading">
+        <h1 class="page-title">新着情報</h1>
+        <p class="page-subtitle">アップデート・機能追加のお知らせ</p>
+      </div>
+
+      <section class="card" aria-labelledby="news-title">
+        <div class="card-header">
+          <h2 class="card-title" id="news-title">最新のお知らせ</h2>
+        </div>
+        <div class="news-list">
+
+          <div class="news-item">
+            <span class="news-date">2026-05-14</span>
+            <div class="news-body">
+              <span class="news-tag news-tag--notice">お知らせ</span>
+              <p class="news-title">Qiita記事「Code4rena終了。競争的監査コンテストはこれからどうなるのか」を公開しました</p>
+              <p class="news-desc">Web3セキュリティ領域の競争的監査プラットフォームCode4rena（2026/7/12終了）について、現状の整理と移行先（Codehawks等）の選択肢をまとめました。<a href="https://qiita.com/sleepycat_web3/items/03218576b7bf0e4e6b36" target="_blank" rel="noopener" style="color:var(--red);">記事を読む →</a></p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">2026-05-11</span>
+            <div class="news-body">
+              <span class="news-tag news-tag--feature">新機能</span>
+              <p class="news-title">連絡先・動画QRコード生成に対応しました</p>
+              <p class="news-desc">トップページのタブから、連絡先（vCard形式）と動画URLのQRコードを生成できるようになりました。メール作成・地図リンクの専用ページも追加しています。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">2026-05-11</span>
+            <div class="news-body">
+              <span class="news-tag news-tag--update">アップデート</span>
+              <p class="news-title">ぽちっとQR工房 正式リリース</p>
+              <p class="news-desc">ぽちっとQR工房を正式にリリースしました。URLをQRコードに変換する基本機能、カラーカスタマイズ、PNGダウンロードに対応しています。完全無料・登録不要でご利用いただけます。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">近日公開</span>
+            <div class="news-body">
+              <span class="news-tag news-tag--notice">予告</span>
+              <p class="news-title">プレミアムプラン・アカウント機能を準備中</p>
+              <p class="news-desc">QRコードの保存・管理・アクセス解析・ロゴ埋め込みなどの高度な機能を含むプレミアムプランを準備中です。<a href="login.html" style="color:var(--red);">メール登録</a>でリリース通知を受け取れます。</p>
+            </div>
+          </div>
+
+          <div class="news-item">
+            <span class="news-date">近日公開</span>
+            <div class="news-body">
+              <span class="news-tag news-tag--feature">新機能予告</span>
+              <p class="news-title">ファイル共有QRコードを開発中</p>
+              <p class="news-desc">PDF・画像・Officeファイルをアップロードしてダウンロードリンク付きQRコードを生成する機能を開発中です。</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="cta-title">
+        <div class="card-header">
+          <h2 class="card-title" id="cta-title">今すぐ無料で使う</h2>
+        </div>
+        <p style="font-size:13px;color:var(--fg-muted);margin-bottom:16px;">登録不要・完全無料。URLを入力するだけでQRコードを即時生成できます。</p>
+        <a href="index.html" class="btn-primary" style="align-self:flex-start;">QRコードを作成する</a>
+      </section>
+    </main>
+
+    <aside class="sidebar sidebar--right">
+      <a href="login.html" class="btn-login btn-login--mobile">新規登録 / ログイン</a>
+      <section class="right-panel">
+        <p class="right-panel-title">QR管理</p>
+        <a href="login.html" class="right-panel-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="1" y="7" width="14" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="1" y="13" width="8" height="2" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
+          マイQR一覧
+        </a>
+        <a href="login.html" class="right-panel-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 8h6M8 5v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          フォルダ管理
+        </a>
+        <a href="login.html" class="right-panel-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M3 5h10M3 11h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          共有履歴
+        </a>
+        <a href="login.html" class="right-panel-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 12V5l5-3 4 2 4-2v9l-4 2-4-2-5 2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          アクセスレポート
+        </a>
+      </section>
+      <section class="right-panel right-panel--account">
+        <p class="right-panel-title">アカウント情報</p>
+        <div class="account-info">
+          <div class="account-row"><span class="account-key">プラン</span><span class="account-val account-val--empty">ログインして確認</span></div>
+          <div class="account-row"><span class="account-key">残り作成数</span><span class="account-val account-val--empty">—</span></div>
+          <div class="account-row"><span class="account-key">有効期限</span><span class="account-val account-val--empty">—</span></div>
+        </div>
+      </section>
+      <section class="right-panel right-panel--promo">
+        <div class="promo-content">
+          <p class="promo-text">プレミアムプランで<br><strong>もっと便利に！</strong></p>
+          <a href="pricing.html" class="btn-promo">詳細を見る</a>
+        </div>
+      </section>
+      <section class="right-panel">
+        <p class="right-panel-title">おすすめリンク</p>
+        <a href="how-to.html" class="right-panel-link">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 4v4l2.5 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          デザインのコツ
+        </a>
+        <a href="use-cases.html" class="right-panel-link">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6h6M4 8.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          活用事例集
+        </a>
+        <a href="marketing.html" class="right-panel-link">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10V5l4-3 3 2 3-2v7l-3 1-3-2-4 2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          マーケティング情報
+        </a>
+      </section>
+      <a href="contact.html" class="btn-chat">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 3h12a1 1 0 011 1v8a1 1 0 01-1 1H6l-4 3V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        お問い合わせ
+      </a>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>すべての処理はブラウザ内で完結。入力内容はサーバーに送信されません。</p>
+    <nav class="footer-links">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">個人情報の取り扱いについて</a>
+      <a href="terms.html">利用規約</a>
+      <a href="about.html">運営会社</a>
+    </nav>
+    <p class="footer-copy">© 2026 ぽちっとQR工房</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
